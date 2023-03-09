@@ -3,7 +3,7 @@
 <p align="center">
   
   <h1 align="center">
-    <img src="https://user-images.githubusercontent.com/45073703/223790183-c6a49ee7-e25b-4c4f-9a15-57292bd9a9c0.png" width="25%">
+    <img src="https://user-images.githubusercontent.com/45073703/223904438-762dea61-a7b6-429b-9008-0580241aac90.png" width="25%">
   </h1>
   <h4 align="center">Frontend solution for enterprise applications built using Ant Design and Tailwind.</h4>
 
