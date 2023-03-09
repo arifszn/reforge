@@ -16,7 +16,7 @@
   </p>
 </p>
 
-**rewindr** is an admin panel starter kit created using ReactJS, Vite, Ant Design, and Tailwind. It's designed to be a starting point for creating a new application quickly.
+**Rewindr** is an admin panel starter kit created using ReactJS, Vite, Ant Design, and Tailwind. It's designed to be a starting point for creating a new application quickly.
 
 ## 📄 License
 
