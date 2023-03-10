@@ -101,7 +101,7 @@ const Layout = () => {
           return [
             <QuestionCircleFilled
               key="QuestionCircleFilled"
-              onClick={() => window.open(config.helpLink, '_blank')}
+              onClick={() => window.open(rewindr.helpLink, '_blank')}
             />,
           ];
         }}
