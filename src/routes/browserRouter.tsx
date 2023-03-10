@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import AuthLayout from '../components/auth/AuthLayout';
 import ErrorPage from '../components/errorPage';
 import Layout from '../components/layout';
-import AdminRedirect from '../components/layout/adminRedirect';
+import Redirect from '../components/layout/Redirect';
 import NotFoundPage from '../components/notfoundPage';
 import { webRoutes } from './web';
 import loadable from '@loadable/component';
@@ -15,8 +15,8 @@ const Users = loadable(() => import('../components/users'));
 
 export const browserRouter = createBrowserRouter([
   {
-    path: webRoutes.admin,
-    element: <AdminRedirect />,
+    path: webRoutes.home,
+    element: <Redirect />,
     errorElement: errorElement,
   },
 
