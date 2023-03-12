@@ -120,7 +120,7 @@ const Login = () => {
 
         <div className="text-center">
           <Button
-            className="mt-4 bg-neutral"
+            className="mt-4 bg-accent"
             block
             loading={loading}
             size="large"

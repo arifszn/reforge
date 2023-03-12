@@ -10,7 +10,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { rewindr } from '../../rewindr.config';
+import rewindr from '../../rewindr.config';
 
 const persistConfig = {
   key: rewindr.appName,

@@ -13,7 +13,7 @@ import { logout } from '../../store/slices/adminSlice';
 import { memo, useEffect } from 'react';
 import { sidebar } from './sidebar';
 import { apiRoutes } from '../../routes/api';
-import { rewindr } from '../../../rewindr.config';
+import rewindr from '../../../rewindr.config';
 import http from '../../utils/http';
 import { handleErrorResponse } from '../../utils';
 
