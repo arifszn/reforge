@@ -1,3 +1,4 @@
+import { AxiosError } from 'axios';
 import { toast } from 'sonner';
 
 enum NotificationType {
@@ -41,7 +42,9 @@ export const handleErrorResponse = (
       }
     }
 
-    if (error?.message) {
+    if (error instanceof AxiosError && error?.response?.data?.error) {
+      errorMessage = error.response.data.error;
+    } else if (error?.message) {
       errorMessage = error.message;
     }
 
