@@ -1,7 +1,7 @@
 import { AxiosError } from 'axios';
 import { toast } from 'sonner';
 
-enum NotificationType {
+export enum NotificationType {
   ERROR = 'error',
   SUCCESS = 'success',
 }
@@ -12,7 +12,7 @@ export const setPageTitle = (title: string) => {
   window.document.title = title;
 };
 
-const showNotification = (
+export const showNotification = (
   message = 'Something went wrong',
   type: NotificationType = NotificationType.ERROR,
   description?: string

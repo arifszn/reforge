@@ -15,7 +15,11 @@ import { sidebar } from './sidebar';
 import { apiRoutes } from '../../routes/api';
 import rewindr from '../../../rewindr.config';
 import http from '../../utils/http';
-import { handleErrorResponse } from '../../utils';
+import {
+  handleErrorResponse,
+  NotificationType,
+  showNotification,
+} from '../../utils';
 
 const Layout = () => {
   const location = useLocation();
@@ -41,10 +45,12 @@ const Layout = () => {
   };
 
   const logoutAdmin = () => {
+    dispatch(logout());
+
     http
       .post(apiRoutes.logout)
       .then(() => {
-        dispatch(logout());
+        showNotification('Logged out successfully.', NotificationType.SUCCESS);
       })
       .catch((error) => {
         handleErrorResponse(error);
