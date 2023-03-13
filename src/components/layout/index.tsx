@@ -31,7 +31,7 @@ const Layout = () => {
 
   const defaultProps: ProLayoutProps = {
     title: rewindr.appName,
-    logo: '/logo.png',
+    logo: '/icon.png',
     fixedHeader: true,
     fixSiderbar: true,
     layout: 'mix',
