@@ -7,6 +7,7 @@ import NotFoundPage from '../components/notfoundPage';
 import { webRoutes } from './web';
 import loadable from '@loadable/component';
 import ProgressBar from '../components/loader/progressBar';
+import RequireAuth from './requireAuth';
 
 const errorElement = <ErrorPage />;
 const Login = loadable(() => import('../components/auth/Login'));
@@ -34,7 +35,11 @@ export const browserRouter = createBrowserRouter([
 
   // protected routes
   {
-    element: <Layout />,
+    element: (
+      <RequireAuth>
+        <Layout />
+      </RequireAuth>
+    ),
     errorElement: errorElement,
     children: [
       {

@@ -25,13 +25,6 @@ const Layout = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const admin = useSelector((state: RootState) => state.admin);
-
-  useEffect(() => {
-    if (!admin) {
-      navigate(webRoutes.login);
-    }
-  }, [admin]);
 
   const defaultProps: ProLayoutProps = {
     title: rewindr.appName,
@@ -46,6 +39,9 @@ const Layout = () => {
 
   const logoutAdmin = () => {
     dispatch(logout());
+    navigate(webRoutes.login, {
+      replace: true,
+    });
 
     http
       .post(apiRoutes.logout)
