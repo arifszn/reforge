@@ -1,4 +1,4 @@
-export interface RewindrConfig {
+declare const rewindr: {
   /**
    * App name
    */
@@ -13,4 +13,6 @@ export interface RewindrConfig {
    * Help link at the navbar
    */
   helpLink: string;
-}
+};
+
+export default rewindr;
