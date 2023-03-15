@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: CONFIG.themeColor,
+        accent: CONFIG.theme.accentColor,
       },
     },
   },

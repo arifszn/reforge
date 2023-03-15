@@ -5,9 +5,14 @@ declare const CONFIG: {
   appName: string;
 
   /**
-   * Theme color
+   * Theme config
    */
-  themeColor: string;
+  theme: {
+    /**
+     * Accent color
+     */
+    accentColor: string;
+  };
 
   /**
    * Help link at the navbar
