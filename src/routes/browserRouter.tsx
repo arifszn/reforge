@@ -8,11 +8,17 @@ import { webRoutes } from './web';
 import loadable from '@loadable/component';
 import ProgressBar from '../components/loader/progressBar';
 import RequireAuth from './requireAuth';
+import Login from '../components/auth/Login';
 
 const errorElement = <ErrorPage />;
-const Login = loadable(() => import('../components/auth/Login'));
-const Dashboard = loadable(() => import('../components/dashboard'));
-const Users = loadable(() => import('../components/users'));
+const fallbackElement = <ProgressBar />;
+
+const Dashboard = loadable(() => import('../components/dashboard'), {
+  fallback: fallbackElement,
+});
+const Users = loadable(() => import('../components/users'), {
+  fallback: fallbackElement,
+});
 
 export const browserRouter = createBrowserRouter([
   {
@@ -28,7 +34,7 @@ export const browserRouter = createBrowserRouter([
     children: [
       {
         path: webRoutes.login,
-        element: <Login fallback={<ProgressBar />} />,
+        element: <Login />,
       },
     ],
   },
@@ -44,11 +50,11 @@ export const browserRouter = createBrowserRouter([
     children: [
       {
         path: webRoutes.dashboard,
-        element: <Dashboard fallback={<ProgressBar />} />,
+        element: <Dashboard />,
       },
       {
         path: webRoutes.users,
-        element: <Users fallback={<ProgressBar />} />,
+        element: <Users />,
       },
     ],
   },

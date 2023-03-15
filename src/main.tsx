@@ -10,7 +10,6 @@ import { store } from './store';
 import { injectStore } from './utils/http';
 import App from './App';
 import './index.css';
-import 'antd/dist/reset.css';
 
 const persistor = persistStore(store);
 injectStore(store);

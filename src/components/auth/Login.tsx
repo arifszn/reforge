@@ -56,7 +56,7 @@ const Login = () => {
 
   return (
     <Fragment>
-      <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-left">
+      <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-left text-opacity-50">
         Admin Login
       </h1>
       <Form
@@ -123,6 +123,7 @@ const Login = () => {
             className="mt-4 bg-accent"
             block
             loading={loading}
+            type="primary"
             size="large"
             htmlType={'submit'}
           >

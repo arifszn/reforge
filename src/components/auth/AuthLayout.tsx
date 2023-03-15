@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router';
+import config from '../../../config';
 import loginBg from '../../assets/img/login-bg.png';
 
 const AuthLayout = () => {
@@ -22,6 +23,10 @@ const AuthLayout = () => {
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
           <section>
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+              <div className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white opacity-90">
+                <img className="w-8 h-8 mr-2" src="/icon.png" alt="logo" />
+                {config.appName}
+              </div>
               <div className="w-full bg-gradient-to-b from-white rounded-lg md:mt-0 sm:max-w-md xl:p-0">
                 <div className="p-8 space-y-4 md:space-y-6 md:p-10">
                   <Outlet />
