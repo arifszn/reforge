@@ -1,3 +1,4 @@
+//config.ts
 const CONFIG = {
   appName: 'Reforge',
   helpLink: 'https://github.com/arifszn/reforge',

@@ -8,7 +8,7 @@
   <h4 align="center">Ultimate toolkit for building enterprise frontend with React, Tailwind and Ant Design.</h4>
 
   <p align="center">
-    <a href="https://reforge.netlify.app"><b>Preview</b></a>
+    <a href="https://reforge.netlify.app"><b>Demo</b></a>
     ·
     <a href="https://github.com/arifszn/reforge/issues"><b>Report Bug</b></a>
     ·
@@ -27,6 +27,57 @@
 - Persistent redux state using `redux-persist`.
 - Loading progress bar using `nprogress`.
 - `ESLint` and `Prettier` enabled.
+
+## Demo
+
+https://reforge.netlify.app
+
+### Credentials
+
+- **Email:** `eve.holt@reqres.in`
+- **Password:** `password`
+
+## Usage
+
+- "Star" this project.
+
+- Clone the project and change directory.
+
+  ```shell
+  git clone https://github.com/arifszn/reforge.git
+  cd reforge
+  ```
+
+- Install dependencies.
+
+  ```shell
+  npm install
+  ```
+
+- Run dev server.
+
+  ```shell
+  npm run dev
+  ```
+
+- Finally, visit [`http://localhost:5173`](http://localhost:5173) from your browser. Credentials can be found above.
+
+## Config
+
+Settings including app name, theme color, meta tags, etc. can be controlled from one single file **`config.ts`** located at the project's root.
+
+```ts
+//config.ts
+const CONFIG = {
+  appName: 'Reforge',
+  helpLink: 'https://github.com/arifszn/reforge',
+  theme: {
+    accentColor: '#30BEB8',
+  },
+};
+
+export default CONFIG;
+```
 
 ## License
 
