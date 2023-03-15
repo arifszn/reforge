@@ -13,7 +13,6 @@ import { logout } from '../../store/slices/adminSlice';
 import { memo, useEffect } from 'react';
 import { sidebar } from './sidebar';
 import { apiRoutes } from '../../routes/api';
-import config from '../../../config';
 import http from '../../utils/http';
 import {
   handleErrorResponse,
@@ -28,7 +27,7 @@ const Layout = () => {
   const dispatch = useDispatch();
 
   const defaultProps: ProLayoutProps = {
-    title: config.appName,
+    title: CONFIG.appName,
     logo: '/icon.png',
     fixedHeader: true,
     fixSiderbar: true,
@@ -104,7 +103,7 @@ const Layout = () => {
           return [
             <QuestionCircleFilled
               key="QuestionCircleFilled"
-              onClick={() => window.open(config.helpLink, '_blank')}
+              onClick={() => window.open(CONFIG.helpLink, '_blank')}
             />,
           ];
         }}

@@ -1,4 +1,4 @@
-declare const config: {
+declare const CONFIG: {
   /**
    * App name
    */
@@ -14,5 +14,3 @@ declare const config: {
    */
   helpLink: string;
 };
-
-export default config;

@@ -10,10 +10,9 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import config from '../../config';
 
 const persistConfig = {
-  key: config.appName,
+  key: CONFIG.appName,
   storage,
 };
 

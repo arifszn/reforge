@@ -1,4 +1,4 @@
-import config from './config';
+import CONFIG from './config';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: config.themeColor,
+        accent: CONFIG.themeColor,
       },
     },
   },
