@@ -2,15 +2,10 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { webRoutes } from '../../routes/web';
 import { Dropdown } from 'antd';
 import { ProLayout, ProLayoutProps } from '@ant-design/pro-components';
-import Icon, {
-  UserOutlined,
-  LogoutOutlined,
-  QuestionCircleFilled,
-} from '@ant-design/icons';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store';
+import Icon, { LogoutOutlined, QuestionCircleFilled } from '@ant-design/icons';
+import { useDispatch } from 'react-redux';
 import { logout } from '../../store/slices/adminSlice';
-import { memo, useEffect } from 'react';
+import { memo } from 'react';
 import { sidebar } from './sidebar';
 import { apiRoutes } from '../../routes/api';
 import http from '../../utils/http';
