@@ -1,10 +1,10 @@
 import { ConfigProviderProps } from 'antd/es/config-provider';
-import rewindr from '../../rewindr.config';
+import reforge from '../../reforge.config';
 
 export const antdConfig: ConfigProviderProps = {
   theme: {
     token: {
-      colorPrimary: rewindr.themeColor,
+      colorPrimary: reforge.themeColor,
     },
   },
 };

@@ -1,4 +1,4 @@
-import rewindr from './rewindr.config';
+import reforge from './reforge.config';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: rewindr.themeColor,
+        accent: reforge.themeColor,
       },
     },
   },

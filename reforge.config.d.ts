@@ -1,4 +1,4 @@
-declare const rewindr: {
+declare const reforge: {
   /**
    * App name
    */
@@ -15,4 +15,4 @@ declare const rewindr: {
   helpLink: string;
 };
 
-export default rewindr;
+export default reforge;

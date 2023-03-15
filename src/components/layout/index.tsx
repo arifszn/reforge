@@ -13,7 +13,7 @@ import { logout } from '../../store/slices/adminSlice';
 import { memo, useEffect } from 'react';
 import { sidebar } from './sidebar';
 import { apiRoutes } from '../../routes/api';
-import rewindr from '../../../rewindr.config';
+import reforge from '../../../reforge.config';
 import http from '../../utils/http';
 import {
   handleErrorResponse,
@@ -27,7 +27,7 @@ const Layout = () => {
   const dispatch = useDispatch();
 
   const defaultProps: ProLayoutProps = {
-    title: rewindr.appName,
+    title: reforge.appName,
     logo: '/icon.png',
     fixedHeader: true,
     fixSiderbar: true,
@@ -103,7 +103,7 @@ const Layout = () => {
           return [
             <QuestionCircleFilled
               key="QuestionCircleFilled"
-              onClick={() => window.open(rewindr.helpLink, '_blank')}
+              onClick={() => window.open(reforge.helpLink, '_blank')}
             />,
           ];
         }}
