@@ -1,4 +1,4 @@
-// .eslintrc.js
+// .eslintrc.cjs
 module.exports = {
   env: {
     browser: true,
@@ -27,5 +27,6 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
   },
 };
