@@ -2,7 +2,7 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { webRoutes } from '../../routes/web';
 import { Dropdown } from 'antd';
 import { ProLayout, ProLayoutProps } from '@ant-design/pro-components';
-import {
+import Icon, {
   UserOutlined,
   LogoutOutlined,
   QuestionCircleFilled,
@@ -20,6 +20,7 @@ import {
   NotificationType,
   showNotification,
 } from '../../utils';
+import { RiShieldUserFill } from 'react-icons/ri';
 
 const Layout = () => {
   const location = useLocation();
@@ -75,7 +76,7 @@ const Layout = () => {
           </a>
         )}
         avatarProps={{
-          icon: <UserOutlined />,
+          icon: <Icon component={RiShieldUserFill} />,
           size: 'small',
           title: 'Admin',
           render: (_, dom) => {

@@ -1,7 +1,7 @@
 const config = {
   appName: 'Reforge',
   themeColor: '#30BEB8',
-  helpLink: 'https://github.com/arifszn/reforge/issues/new',
+  helpLink: 'https://github.com/arifszn/reforge',
 };
 
 export default config;
