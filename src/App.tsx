@@ -5,8 +5,8 @@ import { browserRouter } from './routes/browserRouter';
 function App() {
   return (
     <div className="fade-in">
-      <Toaster />
       <RouterProvider router={browserRouter} />
+      <Toaster />
     </div>
   );
 }

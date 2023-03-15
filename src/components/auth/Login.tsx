@@ -56,7 +56,7 @@ const Login = () => {
 
   return (
     <Fragment>
-      <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-left text-opacity-50">
+      <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-left text-opacity-30 tracking-wide">
         Admin Login
       </h1>
       <Form
@@ -112,11 +112,6 @@ const Login = () => {
             />
           </Form.Item>
         </div>
-        {/* <div className="flex items-center justify-end">
-          <a href="#" className="text-gray-500 dark:text-gray-300 text-xs">
-            Forgot password?
-          </a>
-        </div> */}
 
         <div className="text-center">
           <Button
