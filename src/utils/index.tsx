@@ -29,9 +29,7 @@ export const handleErrorResponse = (
 ) => {
   console.error(error);
 
-  if (errorMessage) {
-    showNotification(errorMessage, NotificationType.ERROR);
-  } else {
+  if (!errorMessage) {
     errorMessage = 'Something went wrong';
 
     if (typeof error === 'string') {
@@ -47,9 +45,13 @@ export const handleErrorResponse = (
     } else if (error?.message) {
       errorMessage = error.message;
     }
-
-    showNotification(errorMessage, NotificationType.ERROR);
   }
+
+  showNotification(
+    errorMessage &&
+      errorMessage.charAt(0).toUpperCase() + errorMessage.slice(1),
+    NotificationType.ERROR
+  );
 
   if (callback) {
     return callback();
