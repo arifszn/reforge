@@ -10,10 +10,10 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import reforge from '../../reforge.config';
+import config from '../../config';
 
 const persistConfig = {
-  key: reforge.appName,
+  key: config.appName,
   storage,
 };
 

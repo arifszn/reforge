@@ -13,7 +13,7 @@ import { logout } from '../../store/slices/adminSlice';
 import { memo, useEffect } from 'react';
 import { sidebar } from './sidebar';
 import { apiRoutes } from '../../routes/api';
-import reforge from '../../../reforge.config';
+import config from '../../../config';
 import http from '../../utils/http';
 import {
   handleErrorResponse,
@@ -27,7 +27,7 @@ const Layout = () => {
   const dispatch = useDispatch();
 
   const defaultProps: ProLayoutProps = {
-    title: reforge.appName,
+    title: config.appName,
     logo: '/icon.png',
     fixedHeader: true,
     fixSiderbar: true,
@@ -103,7 +103,7 @@ const Layout = () => {
           return [
             <QuestionCircleFilled
               key="QuestionCircleFilled"
-              onClick={() => window.open(reforge.helpLink, '_blank')}
+              onClick={() => window.open(config.helpLink, '_blank')}
             />,
           ];
         }}

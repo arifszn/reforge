@@ -4,7 +4,7 @@ import tailwind from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import tailwindConfig from './tailwind.config.mjs';
-import reforge from './reforge.config';
+import config from './config';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +13,7 @@ export default defineConfig({
     createHtmlPlugin({
       inject: {
         data: {
-          title: reforge.appName,
+          title: config.appName,
         },
       },
     }),

@@ -1,4 +1,4 @@
-import reforge from './reforge.config';
+import config from './config';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: reforge.themeColor,
+        accent: config.themeColor,
       },
     },
   },

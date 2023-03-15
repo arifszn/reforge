@@ -1,10 +1,10 @@
 import { ConfigProviderProps } from 'antd/es/config-provider';
-import reforge from '../../reforge.config';
+import config from '../../config';
 
 export const antdConfig: ConfigProviderProps = {
   theme: {
     token: {
-      colorPrimary: reforge.themeColor,
+      colorPrimary: config.themeColor,
     },
   },
 };

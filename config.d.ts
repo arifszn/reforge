@@ -1,4 +1,4 @@
-declare const reforge: {
+declare const config: {
   /**
    * App name
    */
@@ -15,4 +15,4 @@ declare const reforge: {
   helpLink: string;
 };
 
-export default reforge;
+export default config;
