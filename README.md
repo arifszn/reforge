@@ -18,7 +18,15 @@
 
 ## Features
 
-- TO DO
+- Elegant and customizable UI using `Tailwindcss` and `Ant Design`.
+- Single page application using `React Router`.
+- Mock API request using `reqres`.
+- Powerful layout and table using `@ant-design/pro-components`.
+- Code splitting using `@loadable/component`.
+- State management using `react-redux` and `@reduxjs/toolkit`.
+- Persistent redux state using `redux-persist`.
+- Loading progress bar using `nprogress`.
+- `ESLint` and `Prettier` enabled.
 
 ## License
 
