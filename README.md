@@ -73,6 +73,7 @@ const CONFIG = {
   helpLink: 'https://github.com/arifszn/reforge',
   theme: {
     accentColor: '#30BEB8',
+    sidebarLayout: 'mix',
   },
   metaTags: {
     title: 'Reforge',

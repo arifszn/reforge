@@ -1,3 +1,9 @@
+enum LayoutType {
+  MIX = 'mix',
+  TOP = 'top',
+  SIDE = 'side',
+}
+
 declare const CONFIG: {
   /**
    * App name
@@ -17,6 +23,11 @@ declare const CONFIG: {
      * Accent color
      */
     accentColor: string;
+
+    /**
+     * Sidebar layout
+     */
+    sidebarLayout: LayoutType;
   };
 
   /**
