@@ -26,7 +26,7 @@ const Layout = () => {
     logo: '/icon.png',
     fixedHeader: true,
     fixSiderbar: true,
-    layout: 'mix',
+    layout: CONFIG.theme.sidebarLayout,
     route: {
       routes: sidebar,
     },
