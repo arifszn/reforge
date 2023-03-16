@@ -123,7 +123,7 @@ const Login = () => {
 
         <div className="text-center">
           <Button
-            className="mt-4 bg-accent"
+            className="mt-4 bg-primary"
             block
             loading={loading}
             type="primary"
