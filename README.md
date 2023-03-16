@@ -22,7 +22,7 @@
 - Single page application using `React Router`.
 - Mock API request using `reqres`.
 - Powerful layout and table using `@ant-design/pro-components`.
-- Code splitting using `@loadable/component`.
+- Code splitting and lazy loading component using `@loadable/component`.
 - State management using `react-redux` and `@reduxjs/toolkit`.
 - Persistent redux state using `redux-persist`.
 - Loading progress bar using `nprogress`.
