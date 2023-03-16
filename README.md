@@ -3,7 +3,7 @@
 <p align="center">
   
   <h1 align="center">
-    <img src="https://user-images.githubusercontent.com/45073703/225269899-d0d3b91c-b09b-4835-ac78-c0e0be4632fe.png" width="20%">
+    <img src="https://user-images.githubusercontent.com/45073703/225269899-d0d3b91c-b09b-4835-ac78-c0e0be4632fe.png" width="30%">
   </h1>
   <h4 align="center">Ultimate toolkit for building enterprise frontend with React, Tailwind and Ant Design.</h4>
 
@@ -73,6 +73,12 @@ const CONFIG = {
   helpLink: 'https://github.com/arifszn/reforge',
   theme: {
     accentColor: '#30BEB8',
+  },
+  metaTags: {
+    title: 'Reforge',
+    description:
+      'Ultimate toolkit for building enterprise frontend with React, Tailwind and Ant Design.',
+    imageURL: 'logo.svg',
   },
 };
 
