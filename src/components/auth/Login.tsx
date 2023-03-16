@@ -66,6 +66,14 @@ const Login = () => {
         onFinish={onSubmit}
         layout={'vertical'}
         requiredMark={false}
+        initialValues={
+          import.meta.env.VITE_DEMO_MODE === 'true'
+            ? {
+                email: 'eve.holt@reqres.in',
+                password: 'password',
+              }
+            : {}
+        }
       >
         <div>
           <Form.Item
