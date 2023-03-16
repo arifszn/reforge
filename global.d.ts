@@ -5,6 +5,11 @@ declare const CONFIG: {
   appName: string;
 
   /**
+   * Help link at the navbar
+   */
+  helpLink: string;
+
+  /**
    * Theme config
    */
   theme: {
@@ -15,7 +20,22 @@ declare const CONFIG: {
   };
 
   /**
-   * Help link at the navbar
+   * Meta tags
    */
-  helpLink: string;
+  metaTags: {
+    /**
+     * Meta title
+     */
+    title: string;
+
+    /**
+     * Meta description
+     */
+    description: string;
+
+    /**
+     * Meta image
+     */
+    imageURL: string;
+  };
 };

@@ -14,6 +14,9 @@ export default defineConfig({
       inject: {
         data: {
           title: CONFIG.appName,
+          metaTitle: CONFIG.metaTags.title,
+          metaDescription: CONFIG.metaTags.description,
+          metaImageURL: CONFIG.metaTags.imageURL,
         },
       },
     }),
