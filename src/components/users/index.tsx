@@ -1,11 +1,28 @@
 import { ProTable, ProColumns, RequestData } from '@ant-design/pro-components';
-import { Avatar } from 'antd';
+import { Avatar, BreadcrumbProps } from 'antd';
+import Icon from '@ant-design/icons';
 import { useRef } from 'react';
+import { TbUsers } from 'react-icons/tb';
+import { Link } from 'react-router-dom';
 import { User } from '../../interfaces/models/user';
 import { apiRoutes } from '../../routes/api';
+import { webRoutes } from '../../routes/web';
 import { handleErrorResponse } from '../../utils';
 import http from '../../utils/http';
 import BasePageContainer from '../layout/PageContainer';
+
+const breadcrumb: BreadcrumbProps = {
+  items: [
+    {
+      key: webRoutes.dashboard,
+      title: <Link to={webRoutes.dashboard}>Home</Link>,
+    },
+    {
+      key: webRoutes.users,
+      title: <Link to={webRoutes.users}>Users</Link>,
+    },
+  ],
+};
 
 const columns: ProColumns[] = [
   {
@@ -43,10 +60,14 @@ const Users = () => {
   const actionRef = useRef();
 
   return (
-    <BasePageContainer title="Users" subTitle="All Users">
+    <BasePageContainer breadcrumb={breadcrumb}>
       <ProTable
         columns={columns}
         cardBordered={false}
+        cardProps={{
+          subTitle: 'Users',
+          title: <Icon className="opacity-60" component={TbUsers} />,
+        }}
         bordered={true}
         showSorterTooltip={false}
         scroll={{ x: true }}
