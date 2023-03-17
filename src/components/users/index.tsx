@@ -1,5 +1,11 @@
+import BasePageContainer from '../layout/PageContainer';
+
 const Users = () => {
-  return <div>USERS</div>;
+  return (
+    <BasePageContainer title="Users" subTitle="All Users">
+      User List
+    </BasePageContainer>
+  );
 };
 
 export default Users;

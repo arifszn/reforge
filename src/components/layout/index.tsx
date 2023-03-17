@@ -49,13 +49,14 @@ const Layout = () => {
   };
 
   return (
-    <div
-      style={{
-        height: '100vh',
-      }}
-    >
+    <div className="h-screen">
       <ProLayout
         {...defaultProps}
+        token={{
+          sider: {
+            colorMenuBackground: 'white',
+          },
+        }}
         location={location}
         onMenuHeaderClick={() => navigate(webRoutes.dashboard)}
         menuItemRender={(item, dom) => (

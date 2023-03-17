@@ -5,7 +5,7 @@ import { antdConfig } from './constants';
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/integration/react';
-import PageLoader from './components/loader/pageLoader';
+import Loader from './components/loader';
 import { store } from './store';
 import { injectStore } from './utils/http';
 import App from './App';
@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ConfigProvider {...antdConfig}>
       <Provider store={store}>
-        <PersistGate loading={<PageLoader />} persistor={persistor}>
+        <PersistGate loading={<Loader />} persistor={persistor}>
           <App />
         </PersistGate>
       </Provider>
