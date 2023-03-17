@@ -1,6 +1,7 @@
 import { PageContainer, ProCard } from '@ant-design/pro-components';
 import { Breadcrumb, Spin } from 'antd';
 import type { NewBreadcrumbProps } from 'antd/lib/breadcrumb/Breadcrumb';
+import useBreakpoint from '../hooks/breakpoint';
 import Loader from '../loader';
 
 export type BasePageContainerType = {
@@ -15,6 +16,8 @@ export type BasePageContainerType = {
 };
 
 const BasePageContainer = (props: BasePageContainerType) => {
+  const isMobile = useBreakpoint();
+
   return (
     <PageContainer
       header={{
@@ -22,10 +25,12 @@ const BasePageContainer = (props: BasePageContainerType) => {
         breadcrumb: props.breadcrumb,
         extra: props.extra,
       }}
+      childrenContentStyle={isMobile ? { paddingInline: 15 } : {}}
       subTitle={props.subTitle}
     >
       <ProCard
         className="shadow-md mb-10"
+        size="small"
         style={{ minHeight: 500 }}
         loading={
           props.loading ? (

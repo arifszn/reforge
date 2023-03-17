@@ -1,88 +1,86 @@
 import { ProCard, StatisticCard } from '@ant-design/pro-components';
-import { useState } from 'react';
-import RcResizeObserver from 'rc-resize-observer';
+import { useEffect, useState } from 'react';
 import BasePageContainer from '../layout/PageContainer';
+import useBreakpoint from '../hooks/breakpoint';
 
 const { Statistic } = StatisticCard;
 
 const Dashboard = () => {
-  const [responsive, setResponsive] = useState(false);
+  const isMobile = useBreakpoint(596);
+  const [responsive, setResponsive] = useState<boolean>(false);
+
+  useEffect(() => {
+    setResponsive(isMobile);
+  }, [isMobile]);
 
   return (
     <BasePageContainer>
-      <RcResizeObserver
-        key="resize-observer"
-        onResize={(offset) => {
-          setResponsive(offset.width < 596);
-        }}
+      <ProCard
+        title="Dashboard"
+        extra={new Date().toDateString()}
+        split={responsive ? 'horizontal' : 'vertical'}
+        headerBordered
+        bordered
       >
-        <ProCard
-          title="Dashboard"
-          extra={new Date().toDateString()}
-          split={responsive ? 'horizontal' : 'vertical'}
-          headerBordered
-          bordered
-        >
+        <ProCard split="horizontal">
           <ProCard split="horizontal">
-            <ProCard split="horizontal">
-              <ProCard split="vertical">
-                <StatisticCard
-                  statistic={{
-                    title: 'ABC',
-                    value: 234,
-                    description: (
-                      <Statistic title="XYZ" value="8.04%" trend="down" />
-                    ),
-                  }}
-                />
-                <StatisticCard
-                  statistic={{
-                    title: 'ABC',
-                    value: 234,
-                    description: (
-                      <Statistic title="XYZ" value="8.04%" trend="up" />
-                    ),
-                  }}
-                />
-              </ProCard>
-              <ProCard split="vertical">
-                <StatisticCard
-                  statistic={{
-                    title: 'ABC',
-                    value: '12/56',
-                    suffix: '个',
-                  }}
-                />
-                <StatisticCard
-                  statistic={{
-                    title: 'ABC',
-                    value: '134',
-                    suffix: '个',
-                  }}
-                />
-              </ProCard>
+            <ProCard split="vertical">
+              <StatisticCard
+                statistic={{
+                  title: 'ABC',
+                  value: 234,
+                  description: (
+                    <Statistic title="XYZ" value="8.04%" trend="down" />
+                  ),
+                }}
+              />
+              <StatisticCard
+                statistic={{
+                  title: 'ABC',
+                  value: 234,
+                  description: (
+                    <Statistic title="XYZ" value="8.04%" trend="up" />
+                  ),
+                }}
+              />
             </ProCard>
-            <StatisticCard
-              title="XYZ"
-              chart={
-                <img
-                  src="https://gw.alipayobjects.com/zos/alicdn/_dZIob2NB/zhuzhuangtu.svg"
-                  width="100%"
-                />
-              }
-            />
+            <ProCard split="vertical">
+              <StatisticCard
+                statistic={{
+                  title: 'ABC',
+                  value: '12/56',
+                  suffix: '个',
+                }}
+              />
+              <StatisticCard
+                statistic={{
+                  title: 'ABC',
+                  value: '134',
+                  suffix: '个',
+                }}
+              />
+            </ProCard>
           </ProCard>
           <StatisticCard
-            title="ABC"
+            title="XYZ"
             chart={
               <img
-                src="https://gw.alipayobjects.com/zos/alicdn/RLeBTRNWv/bianzu%25252043x.png"
+                src="https://gw.alipayobjects.com/zos/alicdn/_dZIob2NB/zhuzhuangtu.svg"
                 width="100%"
               />
             }
           />
         </ProCard>
-      </RcResizeObserver>
+        <StatisticCard
+          title="ABC"
+          chart={
+            <img
+              src="https://gw.alipayobjects.com/zos/alicdn/RLeBTRNWv/bianzu%25252043x.png"
+              width="100%"
+            />
+          }
+        />
+      </ProCard>
     </BasePageContainer>
   );
 };
