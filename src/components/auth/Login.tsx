@@ -7,7 +7,7 @@ import { RootState } from '../../store';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { webRoutes } from '../../routes/web';
 import { handleErrorResponse, setPageTitle } from '../../utils';
-import { Admin } from '../../interfaces/admin';
+import { Admin } from '../../interfaces/models/admin';
 import { defaultHttp } from '../../utils/http';
 
 type FormValues = {

@@ -1,8 +1,8 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { webRoutes } from '../../routes/web';
-import { Dropdown } from 'antd';
+import { Avatar, Dropdown } from 'antd';
 import { ProLayout, ProLayoutProps } from '@ant-design/pro-components';
-import Icon, { LogoutOutlined, QuestionCircleFilled } from '@ant-design/icons';
+import Icon, { LogoutOutlined, QuestionOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../store/slices/adminSlice';
 import { memo } from 'react';
@@ -49,13 +49,14 @@ const Layout = () => {
   };
 
   return (
-    <div
-      style={{
-        height: '100vh',
-      }}
-    >
+    <div className="h-screen">
       <ProLayout
         {...defaultProps}
+        token={{
+          sider: {
+            colorMenuBackground: 'white',
+          },
+        }}
         location={location}
         onMenuHeaderClick={() => navigate(webRoutes.dashboard)}
         menuItemRender={(item, dom) => (
@@ -98,9 +99,20 @@ const Layout = () => {
         }}
         actionsRender={() => {
           return [
-            <QuestionCircleFilled
-              key="QuestionCircleFilled"
-              onClick={() => window.open(CONFIG.helpLink, '_blank')}
+            <Avatar
+              className="bg-gray-300 bg-opacity-20"
+              key="QuestionCircle"
+              size={'small'}
+              icon={
+                <a
+                  href={CONFIG.helpLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-400 text-opacity-90 hover:text-gray-400"
+                >
+                  <QuestionOutlined />
+                </a>
+              }
             />,
           ];
         }}

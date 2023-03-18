@@ -1,19 +1,32 @@
 import { ProCard, StatisticCard } from '@ant-design/pro-components';
-import { useState } from 'react';
-import RcResizeObserver from 'rc-resize-observer';
+import { useEffect, useState } from 'react';
+import BasePageContainer from '../layout/PageContainer';
+import useBreakpoint from '../hooks/breakpoint';
+import { BreadcrumbProps } from 'antd';
+import { webRoutes } from '../../routes/web';
+import { Link } from 'react-router-dom';
 
 const { Statistic } = StatisticCard;
 
+const breadcrumb: BreadcrumbProps = {
+  items: [
+    {
+      key: webRoutes.dashboard,
+      title: <Link to={webRoutes.dashboard}>Dashboard</Link>,
+    },
+  ],
+};
+
 const Dashboard = () => {
-  const [responsive, setResponsive] = useState(false);
+  const isMobile = useBreakpoint(596);
+  const [responsive, setResponsive] = useState<boolean>(false);
+
+  useEffect(() => {
+    setResponsive(isMobile);
+  }, [isMobile]);
 
   return (
-    <RcResizeObserver
-      key="resize-observer"
-      onResize={(offset) => {
-        setResponsive(offset.width < 596);
-      }}
-    >
+    <BasePageContainer breadcrumb={breadcrumb}>
       <ProCard
         title="Dashboard"
         extra={new Date().toDateString()}
@@ -80,7 +93,7 @@ const Dashboard = () => {
           }
         />
       </ProCard>
-    </RcResizeObserver>
+    </BasePageContainer>
   );
 };
 
