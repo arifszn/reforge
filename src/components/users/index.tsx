@@ -10,6 +10,7 @@ import { webRoutes } from '../../routes/web';
 import { handleErrorResponse } from '../../utils';
 import http from '../../utils/http';
 import BasePageContainer from '../layout/PageContainer';
+import LazyImage from '../lazy-image';
 
 const breadcrumb: BreadcrumbProps = {
   items: [
@@ -32,7 +33,16 @@ const columns: ProColumns[] = [
     sorter: false,
     render: (_, row) =>
       row.avatar ? (
-        <Avatar shape="circle" size="small" src={row.avatar} />
+        <Avatar
+          shape="circle"
+          size="small"
+          src={
+            <LazyImage
+              src={row.avatar}
+              placeholder={<div className="bg-gray-100 h-full w-full" />}
+            />
+          }
+        />
       ) : (
         <Avatar shape="circle" size="small">
           {row.first_name.charAt(0).toUpperCase()}
