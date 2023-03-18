@@ -1,8 +1,7 @@
 import { ProTable, ProColumns, RequestData } from '@ant-design/pro-components';
 import { Avatar, BreadcrumbProps } from 'antd';
-import Icon from '@ant-design/icons';
 import { useRef } from 'react';
-import { TbUsers } from 'react-icons/tb';
+import { FiUsers } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { User } from '../../interfaces/models/user';
 import { apiRoutes } from '../../routes/api';
@@ -76,7 +75,7 @@ const Users = () => {
         cardBordered={false}
         cardProps={{
           subTitle: 'Users',
-          title: <Icon className="opacity-60" component={TbUsers} />,
+          title: <FiUsers className="opacity-60" />,
         }}
         bordered={true}
         showSorterTooltip={false}
