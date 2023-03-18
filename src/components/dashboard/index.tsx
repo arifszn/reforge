@@ -2,8 +2,20 @@ import { ProCard, StatisticCard } from '@ant-design/pro-components';
 import { useEffect, useState } from 'react';
 import BasePageContainer from '../layout/PageContainer';
 import useBreakpoint from '../hooks/breakpoint';
+import { BreadcrumbProps } from 'antd';
+import { webRoutes } from '../../routes/web';
+import { Link } from 'react-router-dom';
 
 const { Statistic } = StatisticCard;
+
+const breadcrumb: BreadcrumbProps = {
+  items: [
+    {
+      key: webRoutes.dashboard,
+      title: <Link to={webRoutes.dashboard}>Dashboard</Link>,
+    },
+  ],
+};
 
 const Dashboard = () => {
   const isMobile = useBreakpoint(596);
@@ -14,7 +26,7 @@ const Dashboard = () => {
   }, [isMobile]);
 
   return (
-    <BasePageContainer>
+    <BasePageContainer breadcrumb={breadcrumb}>
       <ProCard
         title="Dashboard"
         extra={new Date().toDateString()}

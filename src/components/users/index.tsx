@@ -16,7 +16,7 @@ const breadcrumb: BreadcrumbProps = {
   items: [
     {
       key: webRoutes.dashboard,
-      title: <Link to={webRoutes.dashboard}>Home</Link>,
+      title: <Link to={webRoutes.dashboard}>Dashboard</Link>,
     },
     {
       key: webRoutes.users,
