@@ -88,13 +88,6 @@ const CONFIG = {
 export default CONFIG;
 ```
 
-## Support
-
-<p>You can show your support by starring this project. ★</p>
-<a href="https://github.com/arifszn/reforge/stargazers">
-  <img src="https://img.shields.io/github/stars/arifszn/reforge?style=social" alt="Github Star">
-</a>
-
 ## Contribute
 
 To contribute, see the [Contributing guide](https://github.com/arifszn/reforge/blob/main/CONTRIBUTING.md).
