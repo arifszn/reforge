@@ -4,18 +4,10 @@ import {
   ProColumns,
   RequestData,
   TableDropdown,
+  ProDescriptions,
 } from '@ant-design/pro-components';
-import {
-  Avatar,
-  BreadcrumbProps,
-  Dropdown,
-  Menu,
-  MenuProps,
-  Modal,
-  Popconfirm,
-  Space,
-} from 'antd';
-import { createContext, useRef, useState } from 'react';
+import { Avatar, BreadcrumbProps, Modal, Space } from 'antd';
+import { useRef } from 'react';
 import { FiUsers } from 'react-icons/fi';
 import { CiCircleMore } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
@@ -31,9 +23,7 @@ import http from '../../utils/http';
 import BasePageContainer from '../layout/PageContainer';
 import LazyImage from '../lazy-image';
 import Icon, {
-  DownOutlined,
   ExclamationCircleOutlined,
-  EditOutlined,
   DeleteOutlined,
 } from '@ant-design/icons';
 
@@ -56,7 +46,6 @@ const breadcrumb: BreadcrumbProps = {
 
 const Users = () => {
   const actionRef = useRef<ActionType>();
-  const [loading, setLoading] = useState<boolean>(false);
   const [modal, modalContextHolder] = Modal.useModal();
 
   const columns: ProColumns[] = [
@@ -65,7 +54,7 @@ const Users = () => {
       dataIndex: 'avatar',
       align: 'center',
       sorter: false,
-      render: (_, row) =>
+      render: (_, row: User) =>
         row.avatar ? (
           <Avatar
             shape="circle"
@@ -89,7 +78,7 @@ const Users = () => {
       sorter: false,
       align: 'center',
       ellipsis: true,
-      render: (_, row) => `${row.first_name} ${row.last_name}`,
+      render: (_, row: User) => `${row.first_name} ${row.last_name}`,
     },
     {
       title: 'Email',
@@ -103,10 +92,10 @@ const Users = () => {
       align: 'center',
       key: 'option',
       fixed: 'right',
-      render: (_, row) => [
+      render: (_, row: User) => [
         <TableDropdown
           key="actionGroup"
-          onSelect={(key) => handleActionOnSelect(key, row.id)}
+          onSelect={(key) => handleActionOnSelect(key, row)}
           menus={[
             {
               key: ActionKey.DELETE,
@@ -125,24 +114,35 @@ const Users = () => {
     },
   ];
 
-  const handleActionOnSelect = (key: string, id: number) => {
+  const handleActionOnSelect = (key: string, user: User) => {
     if (key === ActionKey.DELETE) {
-      showDeleteConfirmation(id);
+      showDeleteConfirmation(user);
     }
   };
 
-  const showDeleteConfirmation = (id: number) => {
+  const showDeleteConfirmation = (user: User) => {
     modal.confirm({
       title: 'Are you sure to delete the user?',
       icon: <ExclamationCircleOutlined />,
+      content: (
+        <ProDescriptions column={1} title=" ">
+          <ProDescriptions.Item valueType="avatar" label="Avatar">
+            {user.avatar}
+          </ProDescriptions.Item>
+          <ProDescriptions.Item valueType="text" label="Name">
+            {user.first_name} {user.last_name}
+          </ProDescriptions.Item>
+          <ProDescriptions.Item valueType="text" label="Email">
+            {user.email}
+          </ProDescriptions.Item>
+        </ProDescriptions>
+      ),
       okButtonProps: {
         className: 'bg-primary',
       },
       onOk: () => {
-        setLoading(true);
-
-        http
-          .delete(`${apiRoutes.users}/${id}`)
+        return http
+          .delete(`${apiRoutes.users}/${user.id}`)
           .then(() => {
             showNotification(
               'Success',
@@ -154,9 +154,6 @@ const Users = () => {
           })
           .catch((error) => {
             handleErrorResponse(error);
-          })
-          .finally(() => {
-            setLoading(false);
           });
       },
     });
@@ -169,6 +166,10 @@ const Users = () => {
         cardBordered={false}
         cardProps={{
           subTitle: 'Users',
+          tooltip: {
+            className: 'opacity-60',
+            title: 'Mocked data',
+          },
           title: <FiUsers className="opacity-60" />,
         }}
         bordered={true}
@@ -191,8 +192,10 @@ const Users = () => {
               },
             })
             .then((response) => {
+              const users: [User] = response.data.data;
+
               return {
-                data: response.data.data,
+                data: users,
                 success: true,
                 total: response.data.total,
               } as RequestData<User>;
