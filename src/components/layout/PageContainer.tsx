@@ -4,7 +4,7 @@ import type { NewBreadcrumbProps } from 'antd/lib/breadcrumb/Breadcrumb';
 import useBreakpoint from '../hooks/breakpoint';
 import Loader from '../loader';
 
-export type BasePageContainerType = {
+export interface BasePageContainerProps {
   title?: string;
   subTitle?: string;
   breadcrumb?:
@@ -13,9 +13,9 @@ export type BasePageContainerType = {
   extra?: React.ReactNode;
   loading?: boolean;
   children: React.ReactNode;
-};
+}
 
-const BasePageContainer = (props: BasePageContainerType) => {
+const BasePageContainer = (props: BasePageContainerProps) => {
   const isMobile = useBreakpoint();
 
   return (

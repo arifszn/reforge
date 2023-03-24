@@ -5,12 +5,15 @@ const defaultSpinner = (
   <Spin size="large" indicator={<ImSpinner2 className="icon-spin" />} />
 );
 
-export type LoaderType = {
+export interface LoaderProps {
   text?: string;
   spinner?: React.ReactNode;
-};
+}
 
-const Loader = ({ text = 'LOADING', spinner = defaultSpinner }: LoaderType) => {
+const Loader = ({
+  text = 'LOADING',
+  spinner = defaultSpinner,
+}: LoaderProps) => {
   return (
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="flex flex-col opacity-50">
