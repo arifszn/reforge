@@ -2,9 +2,9 @@ import { Fragment, useEffect } from 'react';
 import NProgress from 'nprogress';
 import './progressBar.css';
 
-export type ProgressBarProps = {
+export interface ProgressBarProps {
   spinner?: boolean;
-};
+}
 
 const ProgressBar = ({ spinner = false }: ProgressBarProps) => {
   NProgress.configure({ showSpinner: spinner });

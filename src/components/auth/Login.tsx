@@ -10,10 +10,10 @@ import { handleErrorResponse, setPageTitle } from '../../utils';
 import { Admin } from '../../interfaces/models/admin';
 import { defaultHttp } from '../../utils/http';
 
-type FormValues = {
+interface FormValues {
   email: string;
   password: string;
-};
+}
 
 const Login = () => {
   const dispatch = useDispatch();

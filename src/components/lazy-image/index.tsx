@@ -1,12 +1,12 @@
 import { useState, Fragment, useEffect } from 'react';
 
-export type LazyImageType = {
+export interface LazyImageProps {
   placeholder: React.ReactNode;
   src: string;
   [key: string]: string | React.ReactNode | undefined;
-};
+}
 
-const LazyImage = ({ placeholder, src, ...rest }: LazyImageType) => {
+const LazyImage = ({ placeholder, src, ...rest }: LazyImageProps) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
