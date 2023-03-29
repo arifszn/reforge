@@ -122,7 +122,7 @@ const Users = () => {
 
   const showDeleteConfirmation = (user: User) => {
     modal.confirm({
-      title: 'Are you sure to delete the user?',
+      title: 'Are you sure to delete this user?',
       icon: <ExclamationCircleOutlined />,
       content: (
         <ProDescriptions column={1} title=" ">
