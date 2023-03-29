@@ -12,7 +12,7 @@ const AuthLayout = () => {
           height="1495"
           decoding="async"
           data-nimg="1"
-          className="absolute top-0 left-0 translate-y-[-10%] translate-x-[-55%] -scale-x-100 sm:left-1/2 sm:translate-y-[-6%] sm:translate-x-[-98%] lg:translate-x-[-106%] xl:translate-x-[-122%] opacity-70"
+          className="absolute top-0 left-0 translate-y-[-10%] translate-x-[-55%] -scale-x-100 sm:left-1/2 sm:translate-y-[-6%] sm:translate-x-[-98%] lg:translate-x-[-106%] xl:translate-x-[-122%] opacity-50"
           style={{ color: 'transparent' }}
         />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white"></div>
@@ -22,11 +22,13 @@ const AuthLayout = () => {
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
           <section>
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0 mt-12 md:mt-auto md:h-screen">
-              <div className="flex items-center mb-6 text-2xl font-semibold text-gray-900 opacity-90 tracking-wider">
-                <img className="w-8 h-8 mr-2" src="/icon.png" alt="logo" />
-                {CONFIG.appName}
-              </div>
-              <div className="w-full bg-white rounded-lg md:mt-0 sm:max-w-md xl:p-0 shadow-md">
+              <div
+                className="bg-white rounded-2xl shadow-2xl w-full sm:w-96"
+                style={{
+                  maxWidth: 'calc(100vw - 5rem)',
+                  padding: '2.375rem 2rem 3rem',
+                }}
+              >
                 <div className="p-8 space-y-4 md:space-y-6 md:p-10">
                   <Outlet />
                 </div>
