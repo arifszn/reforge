@@ -16,7 +16,7 @@ const CONFIG = {
   metaTags: {
     title: 'Reforge',
     description:
-      'Ultimate toolkit for building enterprise frontend with React, Tailwind and Ant Design.',
+      'An out-of-box UI solution for enterprise applications as a React boilerplate.',
     imageURL: 'logo.svg',
   },
 };

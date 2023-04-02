@@ -188,7 +188,6 @@ const Users = () => {
               params: {
                 page: params.current,
                 per_page: params.pageSize,
-                fields: 'name',
               },
             })
             .then((response) => {

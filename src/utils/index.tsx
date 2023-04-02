@@ -6,8 +6,6 @@ export enum NotificationType {
   SUCCESS = 'success',
 }
 
-export const API_URL = `https://reqres.in/api`;
-
 export const setPageTitle = (title: string) => {
   window.document.title = title;
 };
