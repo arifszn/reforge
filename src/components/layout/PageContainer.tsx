@@ -13,6 +13,7 @@ export interface BasePageContainerProps {
   extra?: React.ReactNode;
   loading?: boolean;
   children: React.ReactNode;
+  transparent?: boolean;
 }
 
 const BasePageContainer = (props: BasePageContainerProps) => {
@@ -29,9 +30,10 @@ const BasePageContainer = (props: BasePageContainerProps) => {
       subTitle={props.subTitle}
     >
       <ProCard
-        className="shadow-md mb-10"
+        className={`mb-10 ${!props.transparent ? 'shadow-lg' : ''}`}
         size="small"
         style={{ minHeight: 500 }}
+        ghost={props.transparent}
         loading={
           props.loading ? (
             <Loader text={''} spinner={<Spin size="large" />} />

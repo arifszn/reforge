@@ -1,0 +1,25 @@
+.statContent {
+  width: 100%;
+  padding-left: 60px;
+}
+
+.iconWrapper {
+  font-size: 40px;
+  float: left;
+}
+
+.statTitle {
+  line-height: 16px;
+  font-size: 16px;
+  margin-bottom: 8px;
+  height: 16px;
+  white-space: nowrap;
+}
+
+.statNumber {
+  line-height: 32px;
+  font-size: 24px;
+  height: 32px;
+  margin-bottom: 0;
+  white-space: nowrap;
+}

@@ -5,7 +5,7 @@
   <h1 align="center">
     <img src="https://user-images.githubusercontent.com/45073703/225269899-d0d3b91c-b09b-4835-ac78-c0e0be4632fe.png" width="30%">
   </h1>
-  <h4 align="center">Frontend solution for enterprise applications built with Tailwind and Ant Design.</h4>
+  <h4 align="center">An out-of-box UI solution for enterprise applications as a React boilerplate.</h4>
 
   <p align="center">
     <a href="https://reforge.netlify.app"><b>Demo</b></a>
@@ -78,7 +78,7 @@ const CONFIG = {
   metaTags: {
     title: 'Reforge',
     description:
-      'Frontend solution for enterprise applications built with Tailwind and Ant Design.',
+      'An out-of-box UI solution for enterprise applications as a React boilerplate.',
     imageURL: 'logo.svg',
   },
 };

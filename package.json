@@ -37,6 +37,7 @@
     "nprogress": "^0.2.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
+    "react-countup": "^6.4.2",
     "react-icons": "^4.8.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.2",
