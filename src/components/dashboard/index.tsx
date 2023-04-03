@@ -10,6 +10,7 @@ import {
   Rate,
   Row,
   Table,
+  Tag,
 } from 'antd';
 import { webRoutes } from '../../routes/web';
 import { Link } from 'react-router-dom';
@@ -67,14 +68,20 @@ const Dashboard = () => {
 
   const loadReviews = () => {
     return http
-      .get(apiRoutes.reviews, {})
+      .get(apiRoutes.reviews, {
+        params: {
+          per_page: 5,
+        },
+      })
       .then((response) => {
         setReviews(
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          response.data.slice(0, 5).map((rawReview: any) => {
+          response.data.data.map((rawReview: any) => {
             const review: Review = {
               id: rawReview.id,
-              title: rawReview.title,
+              title: rawReview.name,
+              color: rawReview.color,
+              year: rawReview.year,
               star: Math.floor(Math.random() * 5) + 1,
             };
 
@@ -230,11 +237,22 @@ const Dashboard = () => {
                   title: 'Title',
                   dataIndex: 'title',
                   key: 'title',
+                  align: 'left',
+                },
+                {
+                  title: 'Year',
+                  dataIndex: 'year',
+                  key: 'year',
+                  align: 'center',
+                  render: (_, row: Review) => (
+                    <Tag color={row.color}>{row.year}</Tag>
+                  ),
                 },
                 {
                   title: 'Star',
                   dataIndex: 'star',
                   key: 'star',
+                  align: 'center',
                   render: (_, row: Review) => <Rate value={row.star} />,
                 },
               ]}
