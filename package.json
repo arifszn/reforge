@@ -17,7 +17,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@ant-design/pro-components": "^2.4.4",
+    "@ant-design/pro-components": "2.3.59",
     "@loadable/component": "^5.15.3",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/loadable__component": "^5.13.4",
