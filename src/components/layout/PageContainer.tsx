@@ -23,7 +23,7 @@ const BasePageContainer = (props: BasePageContainerProps) => {
     <PageContainer
       header={{
         title: props.title,
-        breadcrumb: props.breadcrumb,
+        breadcrumb: CONFIG.theme.showBreadcrumb ? props.breadcrumb : undefined,
         extra: props.extra,
       }}
       childrenContentStyle={isMobile ? { paddingInline: 15 } : {}}

@@ -74,6 +74,7 @@ const CONFIG = {
   theme: {
     accentColor: '#30BEB8',
     sidebarLayout: 'mix',
+    showBreadcrumb: true,
   },
   metaTags: {
     title: 'Reforge',
