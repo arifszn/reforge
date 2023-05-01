@@ -4,4 +4,5 @@ export const webRoutes = {
   logout: '/logout',
   dashboard: '/dashboard',
   users: '/users',
+  about: '/about',
 };
