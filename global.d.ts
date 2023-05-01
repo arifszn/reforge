@@ -28,6 +28,11 @@ declare const CONFIG: {
      * Sidebar layout
      */
     sidebarLayout: LayoutType;
+
+    /**
+     * Show breadcrumb
+     */
+    showBreadcrumb: boolean;
   };
 
   /**

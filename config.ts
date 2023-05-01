@@ -12,6 +12,7 @@ const CONFIG = {
   theme: {
     accentColor: '#30BEB8',
     sidebarLayout: LayoutType.MIX,
+    showBreadcrumb: true,
   },
   metaTags: {
     title: 'Reforge',

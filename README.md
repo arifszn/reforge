@@ -12,7 +12,7 @@
     ·
     <a href="https://github.com/arifszn/reforge/issues"><b>Report Bug</b></a>
     ·
-    <a href="https://github.com/arifszn/reforge/discussions"><b>Request Feature</b></a>
+    <a href="https://github.com/arifszn/reforge/discussions/categories/ideas"><b>Request Feature</b></a>
   </p>
 </p>
 
@@ -74,6 +74,7 @@ const CONFIG = {
   theme: {
     accentColor: '#30BEB8',
     sidebarLayout: 'mix',
+    showBreadcrumb: true,
   },
   metaTags: {
     title: 'Reforge',
