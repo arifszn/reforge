@@ -10,7 +10,7 @@ const CONFIG = {
   appName: 'Reforge',
   helpLink: 'https://github.com/arifszn/reforge',
   theme: {
-    accentColor: '#30BEB8',
+    accentColor: '#818cf8',
     sidebarLayout: LayoutType.MIX,
     showBreadcrumb: true,
   },
