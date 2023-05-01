@@ -16,7 +16,13 @@
   </p>
 </p>
 
-![Preview](https://user-images.githubusercontent.com/45073703/226084269-44262182-1950-4f66-ada0-f3e3de889367.gif)
+<p align="center">
+  <a href="https://reforge.netlify.app">
+    <img src="https://user-images.githubusercontent.com/45073703/235440010-065d07a1-f387-4f0b-a3a2-879b2d62d1d4.gif" alt="Preview" width="60%"/>
+  </a>
+  <br/>
+  <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
+</p>
 
 ## Features
 
