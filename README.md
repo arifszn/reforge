@@ -35,6 +35,7 @@
 - Persistent redux state using `redux-persist`.
 - Loading progress bar using `nprogress`.
 - `ESLint` and `Prettier` enabled.
+- Automated workflow for checking new Pull Request.
 
 ## Demo
 
