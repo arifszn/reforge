@@ -1,15 +1,13 @@
 import { PageContainer, ProCard } from '@ant-design/pro-components';
 import { Breadcrumb, Spin } from 'antd';
-import type { NewBreadcrumbProps } from 'antd/lib/breadcrumb/Breadcrumb';
 import useBreakpoint from '../hooks/breakpoint';
 import Loader from '../loader';
+import type { BreadcrumbProps } from 'antd/es/breadcrumb/Breadcrumb';
 
 export interface BasePageContainerProps {
   title?: string;
   subTitle?: string;
-  breadcrumb?:
-    | Partial<NewBreadcrumbProps>
-    | React.ReactElement<typeof Breadcrumb>;
+  breadcrumb?: Partial<BreadcrumbProps> | React.ReactElement<typeof Breadcrumb>;
   extra?: React.ReactNode;
   loading?: boolean;
   children: React.ReactNode;
