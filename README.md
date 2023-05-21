@@ -35,7 +35,7 @@
 - Persistent redux state using `redux-persist`.
 - Loading progress bar using `nprogress`.
 - `ESLint` and `Prettier` enabled.
-- Option to enable Progressive Web App (PWA).
+- Option to enable Progressive Web App (PWA). (Only available in production build)
 - Axios interceptor enabled to handle API authorization.
 - Automated workflow for checking new Pull Request.
 
