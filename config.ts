@@ -9,6 +9,7 @@ enum LayoutType {
 const CONFIG = {
   appName: 'Reforge',
   helpLink: 'https://github.com/arifszn/reforge',
+  enablePWA: true,
   theme: {
     accentColor: '#818cf8',
     sidebarLayout: LayoutType.MIX,

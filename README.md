@@ -35,6 +35,7 @@
 - Persistent redux state using `redux-persist`.
 - Loading progress bar using `nprogress`.
 - `ESLint` and `Prettier` enabled.
+- Option to enable Progressive Web App (PWA).
 - Axios interceptor enabled to handle API authorization.
 - Automated workflow for checking new Pull Request.
 
@@ -79,6 +80,7 @@ Settings including app name, theme color, meta tags, etc. can be controlled from
 const CONFIG = {
   appName: 'Reforge',
   helpLink: 'https://github.com/arifszn/reforge',
+  enablePWA: true,
   theme: {
     accentColor: '#818cf8',
     sidebarLayout: 'mix',

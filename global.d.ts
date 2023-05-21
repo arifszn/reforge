@@ -16,6 +16,11 @@ declare const CONFIG: {
   helpLink: string;
 
   /**
+   * Enable Progressive Web App
+   */
+  enablePWA: boolean;
+
+  /**
    * Theme config
    */
   theme: {
