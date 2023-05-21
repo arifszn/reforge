@@ -5,6 +5,7 @@ import autoprefixer from 'autoprefixer';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import tailwindConfig from './tailwind.config.mjs';
 import CONFIG from './config';
+import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,6 +21,7 @@ export default defineConfig({
         },
       },
     }),
+    VitePWA({ registerType: 'autoUpdate' }),
   ],
   css: {
     postcss: {
