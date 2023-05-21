@@ -19,7 +19,7 @@
   "devDependencies": {
     "@ant-design/pro-components": "2.3.59",
     "@loadable/component": "^5.15.3",
-    "@reduxjs/toolkit": "^1.9.3",
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/loadable__component": "^5.13.4",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.2.6",
