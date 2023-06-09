@@ -38,7 +38,7 @@
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "react-countup": "^6.4.2",
-    "react-icons": "^4.8.0",
+    "react-icons": "^4.9.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.11.2",
     "redux-persist": "^6.0.0",
