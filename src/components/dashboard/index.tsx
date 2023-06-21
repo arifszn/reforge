@@ -253,7 +253,9 @@ const Dashboard = () => {
                   dataIndex: 'star',
                   key: 'star',
                   align: 'center',
-                  render: (_, row: Review) => <Rate value={row.star} />,
+                  render: (_, row: Review) => (
+                    <Rate disabled defaultValue={row.star} />
+                  ),
                 },
               ]}
             />
