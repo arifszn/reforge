@@ -39,7 +39,7 @@
     "prettier": "^2.8.8",
     "react-countup": "^6.4.2",
     "react-icons": "^4.9.0",
-    "react-redux": "^8.1.0",
+    "react-redux": "^8.1.1",
     "react-router-dom": "^6.13.0",
     "redux-persist": "^6.0.0",
     "sonner": "^0.5.0",
