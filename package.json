@@ -35,7 +35,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "nprogress": "^0.2.0",
-    "postcss": "^8.4.24",
+    "postcss": "^8.4.25",
     "prettier": "^2.8.8",
     "react-countup": "^6.4.2",
     "react-icons": "^4.10.1",
