@@ -97,7 +97,7 @@ const Layout = () => {
             );
           },
         }}
-        actionsRender={() => {
+        /* actionsRender={() => {
           return [
             <Avatar
               className="bg-gray-300 bg-opacity-20"
@@ -115,7 +115,7 @@ const Layout = () => {
               }
             />,
           ];
-        }}
+        }} */
       >
         <Outlet />
       </ProLayout>
