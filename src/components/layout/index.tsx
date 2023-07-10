@@ -1,19 +1,15 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { webRoutes } from '../../routes/web';
-import { Avatar, Dropdown } from 'antd';
+import { Dropdown } from 'antd';
 import { ProLayout, ProLayoutProps } from '@ant-design/pro-components';
-import Icon, { LogoutOutlined, QuestionOutlined } from '@ant-design/icons';
+import Icon, { LogoutOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../store/slices/adminSlice';
 import { memo } from 'react';
 import { sidebar } from './sidebar';
 import { apiRoutes } from '../../routes/api';
 import http from '../../utils/http';
-import {
-  handleErrorResponse,
-  NotificationType,
-  showNotification,
-} from '../../utils';
+import { handleErrorResponse } from '../../utils';
 import { RiShieldUserFill } from 'react-icons/ri';
 
 const Layout = () => {
@@ -92,25 +88,6 @@ const Layout = () => {
             );
           },
         }}
-        /* actionsRender={() => {
-          return [
-            <Avatar
-              className="bg-gray-300 bg-opacity-20"
-              key="QuestionCircle"
-              size={'small'}
-              icon={
-                <a
-                  href={CONFIG.helpLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-gray-400 text-opacity-90 hover:text-gray-400"
-                >
-                  <QuestionOutlined />
-                </a>
-              }
-            />,
-          ];
-        }} */
       >
         <Outlet />
       </ProLayout>
