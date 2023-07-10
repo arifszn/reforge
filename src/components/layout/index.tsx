@@ -38,14 +38,9 @@ const Layout = () => {
       replace: true,
     });
 
-    http
-      .post(apiRoutes.logout)
-      .then(() => {
-        showNotification('Logged out successfully.', NotificationType.SUCCESS);
-      })
-      .catch((error) => {
-        handleErrorResponse(error);
-      });
+    http.post(apiRoutes.logout).catch((error) => {
+      handleErrorResponse(error);
+    });
   };
 
   return (
