@@ -108,7 +108,7 @@ const Users = () => {
             },
           ]}
         >
-          <Icon component={CiCircleMore} className="text-primary text-xl" />
+          <Icon component={CiCircleMore} className="text-blue-800 text-xl" />
         </TableDropdown>,
       ],
     },
@@ -129,7 +129,7 @@ const Users = () => {
           <ProDescriptions.Item valueType="avatar" label="Avatar">
             {user.avatar}
           </ProDescriptions.Item>
-          <ProDescriptions.Item valueType="text" label="Name">
+          <ProDescriptions.Item valueType="text" label="Usersmame">
             {user.first_name} {user.last_name}
           </ProDescriptions.Item>
           <ProDescriptions.Item valueType="text" label="Email">
@@ -138,7 +138,7 @@ const Users = () => {
         </ProDescriptions>
       ),
       okButtonProps: {
-        className: 'bg-primary',
+        className: ' bg-blue-800',
       },
       onOk: () => {
         return http
@@ -167,7 +167,7 @@ const Users = () => {
         cardProps={{
           subTitle: 'Users',
           tooltip: {
-            className: 'opacity-60',
+            className: 'opacity-80',
             title: 'Mocked data',
           },
           title: <FiUsers className="opacity-60" />,

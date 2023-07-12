@@ -16,6 +16,12 @@ export const sidebar = [
     icon: <UserOutlined />,
   },
   {
+    path: webRoutes.manager,
+    key: webRoutes.manager,
+    name: 'Manager',
+    icon: <UserOutlined />,
+  },
+  {
     path: webRoutes.about,
     key: webRoutes.about,
     name: 'About',
