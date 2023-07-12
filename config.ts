@@ -7,8 +7,8 @@ enum LayoutType {
 }
 
 const CONFIG = {
-  appName: 'Reforge',
-  helpLink: 'https://github.com/arifszn/reforge',
+  appName: 'Nextjs',
+  helpLink: '',
   enablePWA: true,
   theme: {
     accentColor: '#818cf8',

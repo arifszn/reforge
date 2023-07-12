@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+  
+
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
