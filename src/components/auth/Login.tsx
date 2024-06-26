@@ -56,9 +56,14 @@ const Login = () => {
 
   return (
     <Fragment>
-      <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-left text-opacity-30 tracking-wide">
-        Admin Login
-      </h1>
+      <div className="flex flex-col space-y-1.5">
+        <h3 className="font-semibold tracking-tight text-2xl opacity-60">
+          Admin Login
+        </h3>
+        <p className="text-sm text-gray-400">
+          Enter your email below to login to your account
+        </p>
+      </div>
       <Form
         className="space-y-4 md:space-y-6"
         form={form}
