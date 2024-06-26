@@ -19,6 +19,9 @@ const Layout = () => {
 
   const defaultProps: ProLayoutProps = {
     title: CONFIG.appName,
+    pageTitleRender(props, defaultPageTitle) {
+      return `${defaultPageTitle} - ${CONFIG.appName}`;
+    },
     logo: '/icon.png',
     fixedHeader: true,
     fixSiderbar: true,

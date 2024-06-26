@@ -25,7 +25,7 @@ const Login = () => {
   const [form] = Form.useForm();
 
   useEffect(() => {
-    setPageTitle('Admin Login');
+    setPageTitle(`Admin Login - ${CONFIG.appName}`);
   }, []);
 
   useEffect(() => {
