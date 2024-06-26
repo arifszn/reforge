@@ -1,8 +1,9 @@
-import { API_URL } from '../utils';
+export const BACKEND_API_URL =
+  import.meta.env.VITE_BACKEND_API_URL || 'https://reqres.in/api';
 
 export const apiRoutes = {
-  login: `${API_URL}/login`,
-  logout: `${API_URL}/logout`,
-  users: `${API_URL}/users`,
-  reviews: `${API_URL}/unknown`,
+  login: `${BACKEND_API_URL}/login`,
+  logout: `${BACKEND_API_URL}/logout`,
+  users: `${BACKEND_API_URL}/users`,
+  reviews: `${BACKEND_API_URL}/unknown`,
 };

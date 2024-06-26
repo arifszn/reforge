@@ -17,6 +17,7 @@
 }
 
 .statNumber {
+  margin-top: 2px;
   line-height: 32px;
   font-size: 24px;
   height: 32px;

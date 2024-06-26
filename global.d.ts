@@ -11,11 +11,6 @@ declare const CONFIG: {
   appName: string;
 
   /**
-   * Help link at the navbar
-   */
-  helpLink: string;
-
-  /**
    * Enable Progressive Web App
    */
   enablePWA: boolean;

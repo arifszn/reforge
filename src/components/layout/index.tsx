@@ -8,8 +8,8 @@ import { logout } from '../../store/slices/adminSlice';
 import { memo } from 'react';
 import { sidebar } from './sidebar';
 import { apiRoutes } from '../../routes/api';
-import http from '../../utils/http';
-import { handleErrorResponse } from '../../utils';
+import http from '../../lib/http';
+import { handleErrorResponse } from '../../lib/utils';
 import { RiShieldUserFill } from 'react-icons/ri';
 
 const Layout = () => {
@@ -19,6 +19,9 @@ const Layout = () => {
 
   const defaultProps: ProLayoutProps = {
     title: CONFIG.appName,
+    pageTitleRender(props, defaultPageTitle) {
+      return `${defaultPageTitle} - ${CONFIG.appName}`;
+    },
     logo: '/icon.png',
     fixedHeader: true,
     fixSiderbar: true,

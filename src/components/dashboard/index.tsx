@@ -22,9 +22,9 @@ import { MdOutlineArticle, MdOutlinePhoto } from 'react-icons/md';
 import { StatisticCard } from '@ant-design/pro-components';
 import LazyImage from '../lazy-image';
 import { User } from '../../interfaces/models/user';
-import http from '../../utils/http';
+import http from '../../lib/http';
 import { apiRoutes } from '../../routes/api';
-import { handleErrorResponse } from '../../utils';
+import { handleErrorResponse } from '../../lib/utils';
 import { Review } from '../../interfaces/models/review';
 
 const breadcrumb: BreadcrumbProps = {

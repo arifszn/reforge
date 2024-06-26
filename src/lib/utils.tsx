@@ -1,8 +1,6 @@
 import { AxiosError } from 'axios';
 import { toast } from 'sonner';
 
-export const API_URL = `https://reqres.in/api`;
-
 export enum NotificationType {
   ERROR = 'error',
   SUCCESS = 'success',
