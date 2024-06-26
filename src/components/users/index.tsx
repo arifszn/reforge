@@ -18,8 +18,8 @@ import {
   handleErrorResponse,
   NotificationType,
   showNotification,
-} from '../../utils';
-import http from '../../utils/http';
+} from '../../lib/utils';
+import http from '../../lib/http';
 import BasePageContainer from '../layout/PageContainer';
 import LazyImage from '../lazy-image';
 import Icon, {
@@ -137,9 +137,6 @@ const Users = () => {
           </ProDescriptions.Item>
         </ProDescriptions>
       ),
-      okButtonProps: {
-        className: 'bg-primary',
-      },
       onOk: () => {
         return http
           .delete(`${apiRoutes.users}/${user.id}`)

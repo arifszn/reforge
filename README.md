@@ -79,7 +79,6 @@ Settings including app name, theme color, meta tags, etc. can be controlled from
 //config.ts
 const CONFIG = {
   appName: 'Reforge',
-  helpLink: 'https://github.com/arifszn/reforge',
   enablePWA: true,
   theme: {
     accentColor: '#818cf8',

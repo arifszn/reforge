@@ -6,6 +6,7 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 import tailwindConfig from './tailwind.config.mjs';
 import CONFIG from './config';
 import { VitePWA } from 'vite-plugin-pwa';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -50,5 +51,10 @@ export default defineConfig({
   },
   define: {
     CONFIG: CONFIG,
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
   },
 });

@@ -6,9 +6,9 @@ import { login } from '../../store/slices/adminSlice';
 import { RootState } from '../../store';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { webRoutes } from '../../routes/web';
-import { handleErrorResponse, setPageTitle } from '../../utils';
+import { handleErrorResponse, setPageTitle } from '../../lib/utils';
 import { Admin } from '../../interfaces/models/admin';
-import { defaultHttp } from '../../utils/http';
+import { defaultHttp } from '../../lib/http';
 
 interface FormValues {
   email: string;
@@ -123,7 +123,7 @@ const Login = () => {
 
         <div className="text-center">
           <Button
-            className="mt-4 bg-primary"
+            className="mt-4"
             block
             loading={loading}
             type="primary"

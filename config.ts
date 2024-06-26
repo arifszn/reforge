@@ -1,4 +1,6 @@
-//config.ts
+import { loadEnv } from 'vite';
+
+process.env = { ...process.env, ...loadEnv('all', process.cwd()) };
 
 enum LayoutType {
   MIX = 'mix',
@@ -7,13 +9,12 @@ enum LayoutType {
 }
 
 const CONFIG = {
-  appName: 'Reforge',
-  helpLink: 'https://github.com/arifszn/reforge',
-  enablePWA: true,
+  appName: process.env.VITE_APP_NAME || 'Reforge',
+  enablePWA: process.env.VITE_ENABLE_PWA !== 'false',
   theme: {
-    accentColor: '#818cf8',
-    sidebarLayout: LayoutType.MIX,
-    showBreadcrumb: true,
+    accentColor: process.env.VITE_THEME_ACCENT_COLOR || '#18181b',
+    sidebarLayout: process.env.VITE_THEME_SIDEBAR_LAYOUT || LayoutType.TOP,
+    showBreadcrumb: process.env.VITE_SHOW_BREADCRUMB === 'true',
   },
   metaTags: {
     title: 'Reforge',

@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="fade-in">
       <RouterProvider router={browserRouter} />
-      <Toaster />
+      <Toaster closeButton />
     </div>
   );
 }
