@@ -25,3 +25,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </ConfigProvider>
   </React.StrictMode>
 );
+
+window?.addEventListener('vite:preloadError', () => {
+  window?.location?.reload();
+});
