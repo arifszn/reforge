@@ -108,7 +108,7 @@ const UserListPage = () => {
             },
           ]}
         >
-          <Icon component={CiCircleMore} className="text-primary text-xl" />
+          <Icon component={CiCircleMore} className="text-rfprimary text-xl" />
         </TableDropdown>,
       ],
     },

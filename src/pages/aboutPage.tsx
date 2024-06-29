@@ -27,7 +27,7 @@ const AboutPage = () => {
       <div className="m-5">
         <article>
           <header className="mb-9 space-y-1">
-            <p className="font-display text-sm font-medium text-primary">
+            <p className="font-display text-sm font-medium text-rfprimary">
               v{packageVersion}
             </p>
             <h1 className="font-display text-3xl tracking-tight text-slate-900">
@@ -49,7 +49,7 @@ const AboutPage = () => {
                       href="https://github.com/arifszn/reforge"
                       target="_blank"
                       rel="noreferrer"
-                      className="hover:text-primary"
+                      className="hover:text-rfprimary"
                     >
                       <span className="absolute -inset-px rounded-xl" />
                       GitHub
@@ -69,7 +69,7 @@ const AboutPage = () => {
                       href="https://github.com/arifszn/reforge/issues"
                       target="_blank"
                       rel="noreferrer"
-                      className="hover:text-primary"
+                      className="hover:text-rfprimary"
                     >
                       <span className="absolute -inset-px rounded-xl" />
                       Report Bug
@@ -89,7 +89,7 @@ const AboutPage = () => {
                       href="https://github.com/arifszn/reforge/discussions/categories/ideas"
                       target="_blank"
                       rel="noreferrer"
-                      className="hover:text-primary"
+                      className="hover:text-rfprimary"
                     >
                       <span className="absolute -inset-px rounded-xl" />
                       Request Feature
@@ -109,7 +109,7 @@ const AboutPage = () => {
                       href="https://github.com/arifszn/reforge/blob/main/CONTRIBUTING.md"
                       target="_blank"
                       rel="noreferrer"
-                      className="hover:text-primary"
+                      className="hover:text-rfprimary"
                     >
                       <span className="absolute -inset-px rounded-xl" />
                       Contribute

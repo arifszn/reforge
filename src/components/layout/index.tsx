@@ -66,7 +66,7 @@ const Layout = () => {
         )}
         avatarProps={{
           icon: <Icon component={RiShieldUserFill} />,
-          className: 'bg-primary bg-opacity-20 text-primary text-opacity-90',
+          className: 'bg-rfprimary bg-opacity-20 text-rfprimary text-opacity-90',
           size: 'small',
           shape: 'square',
           title: 'Admin',

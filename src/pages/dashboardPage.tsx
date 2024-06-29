@@ -168,7 +168,7 @@ const DashboardPage = () => {
                 }}
                 chart={
                   <Progress
-                    className="text-primary"
+                    className="text-rfprimary"
                     percent={loading ? 0 : 75}
                     type="circle"
                     size={'small'}

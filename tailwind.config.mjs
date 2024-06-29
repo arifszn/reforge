@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: CONFIG.theme.accentColor,
+        rfprimary: CONFIG.theme.accentColor,
       },
     },
   },
