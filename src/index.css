@@ -12,6 +12,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body,
+p {
+  margin: 0;
+}
+
 .fade-in {
   opacity: 1;
   animation-name: fadeIn;
@@ -23,6 +28,12 @@
 .icon-spin {
   -webkit-animation: icon-spin 1s infinite linear;
   animation: icon-spin 1s infinite linear;
+}
+
+.ant-pro-top-nav-header-logo > *:first-child,
+.ant-pro-sider-logo > a,
+.ant-pro-global-header-logo > a {
+  opacity: 60%;
 }
 
 @keyframes fadeIn {

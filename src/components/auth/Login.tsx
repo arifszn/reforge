@@ -57,7 +57,7 @@ const Login = () => {
   return (
     <Fragment>
       <div className="flex flex-col space-y-1.5">
-        <h3 className="font-semibold tracking-tight text-2xl opacity-60">
+        <h3 className="font-semibold tracking-tight text-2xl opacity-60 my-0">
           Admin Login
         </h3>
         <p className="text-sm text-gray-400">
