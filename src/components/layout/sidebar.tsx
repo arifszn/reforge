@@ -1,4 +1,4 @@
-import { webRoutes } from '../../routes/web';
+import { webRoutes } from '@/routes/web';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import Icon, { UserOutlined, InfoCircleOutlined } from '@ant-design/icons';
 

@@ -11,17 +11,17 @@ import { useRef } from 'react';
 import { FiUsers } from 'react-icons/fi';
 import { CiCircleMore } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
-import { User } from '../../interfaces/models/user';
-import { apiRoutes } from '../../routes/api';
-import { webRoutes } from '../../routes/web';
+import { User } from '@/interfaces/user';
+import { apiRoutes } from '@/routes/api';
+import { webRoutes } from '@/routes/web';
 import {
   handleErrorResponse,
   NotificationType,
   showNotification,
-} from '../../lib/utils';
-import http from '../../lib/http';
-import BasePageContainer from '../layout/PageContainer';
-import LazyImage from '../lazy-image';
+} from '@/lib/utils';
+import http from '@/lib/http';
+import BasePageContainer from '@/components/layout/pageContainer';
+import LazyImage from '@/components/lazy-image';
 import Icon, {
   ExclamationCircleOutlined,
   DeleteOutlined,
@@ -44,7 +44,7 @@ const breadcrumb: BreadcrumbProps = {
   ],
 };
 
-const Users = () => {
+const UserListPage = () => {
   const actionRef = useRef<ActionType>();
   const [modal, modalContextHolder] = Modal.useModal();
 
@@ -217,4 +217,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default UserListPage;

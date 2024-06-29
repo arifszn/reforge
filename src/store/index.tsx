@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import adminSlice, { AdminState } from './slices/adminSlice';
+import adminSlice, { AdminState } from '@/store/slices/adminSlice';
 import {
   persistReducer,
   FLUSH,

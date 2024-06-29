@@ -1,6 +1,6 @@
 import { Fragment, useEffect } from 'react';
 import NProgress from 'nprogress';
-import './progressBar.css';
+import '@/components/loader/progressBar.css';
 
 export interface ProgressBarProps {
   spinner?: boolean;

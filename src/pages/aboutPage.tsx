@@ -1,10 +1,10 @@
 import { BreadcrumbProps } from 'antd';
-import BasePageContainer from '../layout/PageContainer';
-import { webRoutes } from '../../routes/web';
+import BasePageContainer from '@/components/layout/pageContainer';
+import { webRoutes } from '@/routes/web';
 import { Link } from 'react-router-dom';
 import { AiFillGithub, AiOutlineBug, AiOutlineHeart } from 'react-icons/ai';
 import { FaRegLightbulb } from 'react-icons/fa';
-import packageJson from '../../../package.json';
+import packageJson from '../../package.json';
 
 const breadcrumb: BreadcrumbProps = {
   items: [
@@ -19,7 +19,7 @@ const breadcrumb: BreadcrumbProps = {
   ],
 };
 
-const About = () => {
+const AboutPage = () => {
   const packageVersion = packageJson.version;
 
   return (
@@ -128,4 +128,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

@@ -1,7 +1,7 @@
 import { PageContainer, ProCard } from '@ant-design/pro-components';
 import { Breadcrumb, Spin } from 'antd';
 import useBreakpoint from '@/hooks/breakpoint';
-import Loader from '../loader';
+import Loader from '@/components/loader';
 import type { BreadcrumbProps } from 'antd/es/breadcrumb/Breadcrumb';
 
 export interface BasePageContainerProps {

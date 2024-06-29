@@ -1,14 +1,14 @@
 import { Button, Form, Input } from 'antd';
 import { Fragment, useEffect, useState } from 'react';
-import { apiRoutes } from '../../routes/api';
+import { apiRoutes } from '@/routes/api';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../store/slices/adminSlice';
-import { RootState } from '../../store';
+import { login } from '@/store/slices/adminSlice';
+import { RootState } from '@/store';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { webRoutes } from '../../routes/web';
-import { handleErrorResponse, setPageTitle } from '../../lib/utils';
-import { Admin } from '../../interfaces/models/admin';
-import { defaultHttp } from '../../lib/http';
+import { webRoutes } from '@/routes/web';
+import { handleErrorResponse, setPageTitle } from '@/lib/utils';
+import { Admin } from '@/interfaces/admin';
+import { defaultHttp } from '@/lib/http';
 
 interface FormValues {
   email: string;

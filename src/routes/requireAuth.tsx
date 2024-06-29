@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Navigate, useLocation } from 'react-router-dom';
-import { RootState } from '../store';
-import { webRoutes } from './web';
+import { RootState } from '@/store';
+import { webRoutes } from '@/routes/web';
 
 export type RequireAuthProps = {
   children: JSX.Element;
