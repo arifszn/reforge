@@ -1,10 +1,10 @@
 import { BreadcrumbProps } from 'antd';
-import BasePageContainer from '../layout/PageContainer';
-import { webRoutes } from '../../routes/web';
+import BasePageContainer from '@/components/layout/pageContainer';
+import { webRoutes } from '@/routes/web';
 import { Link } from 'react-router-dom';
 import { AiFillGithub, AiOutlineBug, AiOutlineHeart } from 'react-icons/ai';
 import { FaRegLightbulb } from 'react-icons/fa';
-import packageJson from '../../../package.json';
+import packageJson from '../../package.json';
 
 const breadcrumb: BreadcrumbProps = {
   items: [
@@ -19,7 +19,7 @@ const breadcrumb: BreadcrumbProps = {
   ],
 };
 
-const About = () => {
+const AboutPage = () => {
   const packageVersion = packageJson.version;
 
   return (
@@ -27,7 +27,7 @@ const About = () => {
       <div className="m-5">
         <article>
           <header className="mb-9 space-y-1">
-            <p className="font-display text-sm font-medium text-primary">
+            <p className="font-display text-sm font-medium text-rfprimary">
               v{packageVersion}
             </p>
             <h1 className="font-display text-3xl tracking-tight text-slate-900">
@@ -40,7 +40,7 @@ const About = () => {
               boilerplate.{' '}
             </p>
             <div className="my-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div className="group relative rounded-xl border border-slate-200">
+              <div className="group relative rounded-xl border border-slate-200 border-solid">
                 <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.sky.50)),var(--quick-links-hover-bg,theme(colors.sky.50)))_padding-box,linear-gradient(to_top,theme(colors.indigo.400),theme(colors.cyan.400),theme(colors.sky.500))_border-box] group-hover:opacity-100" />
                 <div className="relative overflow-hidden rounded-xl p-6">
                   <AiFillGithub className="text-4xl opacity-90" />
@@ -49,7 +49,7 @@ const About = () => {
                       href="https://github.com/arifszn/reforge"
                       target="_blank"
                       rel="noreferrer"
-                      className="hover:text-primary"
+                      className="hover:text-rfprimary"
                     >
                       <span className="absolute -inset-px rounded-xl" />
                       GitHub
@@ -60,7 +60,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="group relative rounded-xl border border-slate-200">
+              <div className="group relative rounded-xl border border-slate-200 border-solid">
                 <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.sky.50)),var(--quick-links-hover-bg,theme(colors.sky.50)))_padding-box,linear-gradient(to_top,theme(colors.indigo.400),theme(colors.cyan.400),theme(colors.sky.500))_border-box] group-hover:opacity-100" />
                 <div className="relative overflow-hidden rounded-xl p-6">
                   <AiOutlineBug className="text-4xl opacity-90" />
@@ -69,7 +69,7 @@ const About = () => {
                       href="https://github.com/arifszn/reforge/issues"
                       target="_blank"
                       rel="noreferrer"
-                      className="hover:text-primary"
+                      className="hover:text-rfprimary"
                     >
                       <span className="absolute -inset-px rounded-xl" />
                       Report Bug
@@ -80,7 +80,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="group relative rounded-xl border border-slate-200">
+              <div className="group relative rounded-xl border border-slate-200 border-solid">
                 <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.sky.50)),var(--quick-links-hover-bg,theme(colors.sky.50)))_padding-box,linear-gradient(to_top,theme(colors.indigo.400),theme(colors.cyan.400),theme(colors.sky.500))_border-box] group-hover:opacity-100" />
                 <div className="relative overflow-hidden rounded-xl p-6">
                   <FaRegLightbulb className="text-4xl opacity-90" />
@@ -89,7 +89,7 @@ const About = () => {
                       href="https://github.com/arifszn/reforge/discussions/categories/ideas"
                       target="_blank"
                       rel="noreferrer"
-                      className="hover:text-primary"
+                      className="hover:text-rfprimary"
                     >
                       <span className="absolute -inset-px rounded-xl" />
                       Request Feature
@@ -100,7 +100,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="group relative rounded-xl border border-slate-200">
+              <div className="group relative rounded-xl border border-slate-200 border-solid">
                 <div className="absolute -inset-px rounded-xl border-2 border-transparent opacity-0 [background:linear-gradient(var(--quick-links-hover-bg,theme(colors.sky.50)),var(--quick-links-hover-bg,theme(colors.sky.50)))_padding-box,linear-gradient(to_top,theme(colors.indigo.400),theme(colors.cyan.400),theme(colors.sky.500))_border-box] group-hover:opacity-100" />
                 <div className="relative overflow-hidden rounded-xl p-6">
                   <AiOutlineHeart className="text-4xl opacity-90" />
@@ -109,7 +109,7 @@ const About = () => {
                       href="https://github.com/arifszn/reforge/blob/main/CONTRIBUTING.md"
                       target="_blank"
                       rel="noreferrer"
-                      className="hover:text-primary"
+                      className="hover:text-rfprimary"
                     >
                       <span className="absolute -inset-px rounded-xl" />
                       Contribute
@@ -128,4 +128,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

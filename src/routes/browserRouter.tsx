@@ -1,23 +1,25 @@
 import { createBrowserRouter } from 'react-router-dom';
-import AuthLayout from '../components/auth/AuthLayout';
-import ErrorPage from '../components/errorPage';
-import Layout from '../components/layout';
-import Redirect from '../components/layout/Redirect';
-import NotFoundPage from '../components/notfoundPage';
-import { webRoutes } from './web';
+import AuthLayout from '@/components/layout/authLayout';
+import ErrorPage from '@/pages/errors/errorPage';
+import Layout from '@/components/layout';
+import Redirect from '@/components/layout/redirect';
+import NotFoundPage from '@/pages/errors/notfoundPage';
+import { webRoutes } from '@/routes/web';
 import loadable from '@loadable/component';
-import ProgressBar from '../components/loader/progressBar';
-import RequireAuth from './requireAuth';
-import Login from '../components/auth/Login';
-import About from '../components/demo-pages/about';
+import ProgressBar from '@/components/loader/progressBar';
+import RequireAuth from '@/routes/requireAuth';
+import LoginPage from '@/pages/auth/loginPage';
 
 const errorElement = <ErrorPage />;
 const fallbackElement = <ProgressBar />;
 
-const Dashboard = loadable(() => import('../components/dashboard'), {
+const DashboardPage = loadable(() => import('@/pages/dashboardPage'), {
   fallback: fallbackElement,
 });
-const Users = loadable(() => import('../components/users'), {
+const UserListPage = loadable(() => import('@/pages/users/userListPage'), {
+  fallback: fallbackElement,
+});
+const AboutPage = loadable(() => import('@/pages/aboutPage'), {
   fallback: fallbackElement,
 });
 
@@ -35,7 +37,7 @@ export const browserRouter = createBrowserRouter([
     children: [
       {
         path: webRoutes.login,
-        element: <Login />,
+        element: <LoginPage />,
       },
     ],
   },
@@ -51,15 +53,15 @@ export const browserRouter = createBrowserRouter([
     children: [
       {
         path: webRoutes.dashboard,
-        element: <Dashboard />,
+        element: <DashboardPage />,
       },
       {
         path: webRoutes.users,
-        element: <Users />,
+        element: <UserListPage />,
       },
       {
         path: webRoutes.about,
-        element: <About />,
+        element: <AboutPage />,
       },
     ],
   },

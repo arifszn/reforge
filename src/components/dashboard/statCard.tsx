@@ -1,7 +1,7 @@
 import { Card, Skeleton, Typography } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import CountUp from 'react-countup';
-import styles from './statCard.module.css';
+import styles from '@/components/dashboard/statCard.module.css';
 import React, { Fragment } from 'react';
 
 const { Text } = Typography;
@@ -27,7 +27,7 @@ const StatCard = ({
 
   const children = (
     <div style={{ cursor: link ? 'pointer' : 'default' }}>
-      <span className={`${styles.iconWrapper} text-primary text-opacity-80`}>
+      <span className={`${styles.iconWrapper} text-rfprimary text-opacity-80`}>
         {icon}
       </span>
       <div className={styles.statContent}>

@@ -1,7 +1,7 @@
 import { Store } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { RootState } from '../store';
-import { logout } from '../store/slices/adminSlice';
+import { RootState } from '@/store';
+import { logout } from '@/store/slices/adminSlice';
 
 let store: Store;
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import BasePageContainer from '../layout/PageContainer';
+import BasePageContainer from '@/components/layout/pageContainer';
 import {
   Avatar,
   BreadcrumbProps,
@@ -12,20 +12,20 @@ import {
   Table,
   Tag,
 } from 'antd';
-import { webRoutes } from '../../routes/web';
+import { webRoutes } from '@/routes/web';
 import { Link } from 'react-router-dom';
-import StatCard from './StatCard';
+import StatCard from '@/components/dashboard/statCard';
 import { AiOutlineStar, AiOutlineTeam } from 'react-icons/ai';
 import Icon from '@ant-design/icons';
 import { BiCommentDetail, BiPhotoAlbum } from 'react-icons/bi';
 import { MdOutlineArticle, MdOutlinePhoto } from 'react-icons/md';
 import { StatisticCard } from '@ant-design/pro-components';
-import LazyImage from '../lazy-image';
-import { User } from '../../interfaces/models/user';
-import http from '../../lib/http';
-import { apiRoutes } from '../../routes/api';
-import { handleErrorResponse } from '../../lib/utils';
-import { Review } from '../../interfaces/models/review';
+import LazyImage from '@/components/lazy-image';
+import { User } from '@/interfaces/user';
+import http from '@/lib/http';
+import { apiRoutes } from '@/routes/api';
+import { handleErrorResponse } from '@/lib/utils';
+import { Review } from '@/interfaces/review';
 
 const breadcrumb: BreadcrumbProps = {
   items: [
@@ -36,7 +36,7 @@ const breadcrumb: BreadcrumbProps = {
   ],
 };
 
-const Dashboard = () => {
+const DashboardPage = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [users, setUsers] = useState<User[]>([]);
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -168,7 +168,7 @@ const Dashboard = () => {
                 }}
                 chart={
                   <Progress
-                    className="text-primary"
+                    className="text-rfprimary"
                     percent={loading ? 0 : 75}
                     type="circle"
                     size={'small'}
@@ -266,4 +266,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardPage;

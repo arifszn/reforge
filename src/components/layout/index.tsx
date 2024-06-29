@@ -1,15 +1,15 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { webRoutes } from '../../routes/web';
+import { webRoutes } from '@/routes/web';
 import { Dropdown } from 'antd';
 import { ProLayout, ProLayoutProps } from '@ant-design/pro-components';
 import Icon, { LogoutOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
-import { logout } from '../../store/slices/adminSlice';
+import { logout } from '@/store/slices/adminSlice';
 import { memo } from 'react';
-import { sidebar } from './sidebar';
-import { apiRoutes } from '../../routes/api';
-import http from '../../lib/http';
-import { handleErrorResponse } from '../../lib/utils';
+import { sidebar } from '@/components/layout/sidebar';
+import { apiRoutes } from '@/routes/api';
+import http from '@/lib/http';
+import { handleErrorResponse } from '@/lib/utils';
 import { RiShieldUserFill } from 'react-icons/ri';
 
 const Layout = () => {
@@ -66,7 +66,8 @@ const Layout = () => {
         )}
         avatarProps={{
           icon: <Icon component={RiShieldUserFill} />,
-          className: 'bg-primary bg-opacity-20 text-primary text-opacity-90',
+          className:
+            'bg-rfprimary bg-opacity-20 text-rfprimary text-opacity-90',
           size: 'small',
           shape: 'square',
           title: 'Admin',

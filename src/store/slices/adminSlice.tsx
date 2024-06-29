@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Admin } from '../../interfaces/models/admin';
+import { Admin } from '@/interfaces/admin';
 
 export type AdminState = Admin | null;
 

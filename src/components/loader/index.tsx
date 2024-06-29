@@ -11,7 +11,7 @@ export interface LoaderProps {
 }
 
 const Loader = ({
-  text = 'LOADING',
+  text = 'Loading...',
   spinner = defaultSpinner,
 }: LoaderProps) => {
   return (

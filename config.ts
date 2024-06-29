@@ -10,7 +10,7 @@ enum LayoutType {
 
 const CONFIG = {
   appName: process.env.VITE_APP_NAME || 'Reforge',
-  enablePWA: process.env.VITE_ENABLE_PWA !== 'false',
+  enablePWA: process.env.VITE_ENABLE_PWA === 'true',
   theme: {
     accentColor: process.env.VITE_THEME_ACCENT_COLOR || '#18181b',
     sidebarLayout: process.env.VITE_THEME_SIDEBAR_LAYOUT || LayoutType.TOP,

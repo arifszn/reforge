@@ -1,21 +1,21 @@
 import { Button, Form, Input } from 'antd';
 import { Fragment, useEffect, useState } from 'react';
-import { apiRoutes } from '../../routes/api';
+import { apiRoutes } from '@/routes/api';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../store/slices/adminSlice';
-import { RootState } from '../../store';
+import { login } from '@/store/slices/adminSlice';
+import { RootState } from '@/store';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { webRoutes } from '../../routes/web';
-import { handleErrorResponse, setPageTitle } from '../../lib/utils';
-import { Admin } from '../../interfaces/models/admin';
-import { defaultHttp } from '../../lib/http';
+import { webRoutes } from '@/routes/web';
+import { handleErrorResponse, setPageTitle } from '@/lib/utils';
+import { Admin } from '@/interfaces/admin';
+import { defaultHttp } from '@/lib/http';
 
 interface FormValues {
   email: string;
   password: string;
 }
 
-const Login = () => {
+const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
@@ -57,7 +57,7 @@ const Login = () => {
   return (
     <Fragment>
       <div className="flex flex-col space-y-1.5">
-        <h3 className="font-semibold tracking-tight text-2xl opacity-60">
+        <h3 className="font-semibold tracking-tight text-2xl opacity-60 my-0">
           Admin Login
         </h3>
         <p className="text-sm text-gray-400">
@@ -143,4 +143,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;
