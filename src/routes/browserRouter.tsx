@@ -1,23 +1,23 @@
 import { createBrowserRouter } from 'react-router-dom';
-import AuthLayout from '../components/auth/AuthLayout';
-import ErrorPage from '../components/errorPage';
+import AuthLayout from '@/components/layout/authLayout';
+import ErrorPage from '@/pages/errors/errorPage';
 import Layout from '../components/layout';
 import Redirect from '../components/layout/Redirect';
-import NotFoundPage from '../components/notfoundPage';
+import NotFoundPage from '@/pages/errors/notfoundPage';
 import { webRoutes } from './web';
 import loadable from '@loadable/component';
 import ProgressBar from '../components/loader/progressBar';
 import RequireAuth from './requireAuth';
-import Login from '../components/auth/Login';
+import LoginPage from '@/pages/auth/loginPage';
 import About from '../components/demo-pages/about';
 
 const errorElement = <ErrorPage />;
 const fallbackElement = <ProgressBar />;
 
-const Dashboard = loadable(() => import('../components/dashboard'), {
+const Dashboard = loadable(() => import('@/components/dashboard'), {
   fallback: fallbackElement,
 });
-const Users = loadable(() => import('../components/users'), {
+const Users = loadable(() => import('@/components/users'), {
   fallback: fallbackElement,
 });
 
@@ -35,7 +35,7 @@ export const browserRouter = createBrowserRouter([
     children: [
       {
         path: webRoutes.login,
-        element: <Login />,
+        element: <LoginPage />,
       },
     ],
   },
