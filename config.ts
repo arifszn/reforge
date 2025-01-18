@@ -13,7 +13,7 @@ const CONFIG = {
   enablePWA: process.env.VITE_ENABLE_PWA === 'true',
   theme: {
     accentColor: process.env.VITE_THEME_ACCENT_COLOR || '#18181b',
-    sidebarLayout: process.env.VITE_THEME_SIDEBAR_LAYOUT || LayoutType.SIDE,
+    sidebarLayout: process.env.VITE_THEME_SIDEBAR_LAYOUT || LayoutType.MIX,
     showBreadcrumb: process.env.VITE_SHOW_BREADCRUMB === 'true',
   },
   metaTags: {
