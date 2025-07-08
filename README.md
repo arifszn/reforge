@@ -21,7 +21,7 @@
     <img src="https://user-images.githubusercontent.com/45073703/235440010-065d07a1-f387-4f0b-a3a2-879b2d62d1d4.gif" alt="Preview" width="60%"/>
   </a>
   <br/>
-  <a href="#arifszn"><img src="https://arifszn.netlify.app/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
+  <a href="#arifszn"><img src="https://github.com/user-attachments/assets/59bb3a9b-86f0-45d7-a4f1-1855bd70c709" width="50%" alt="Shadow"/></a>
 </p>
 
 ## Features
