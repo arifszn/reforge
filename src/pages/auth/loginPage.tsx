@@ -38,10 +38,18 @@ const LoginPage = () => {
     setLoading(true);
 
     defaultHttp
-      .post(apiRoutes.login, {
-        email: values.email,
-        password: values.password,
-      })
+      .post(
+        apiRoutes.login,
+        {
+          email: values.email,
+          password: values.password,
+        },
+        {
+          headers: {
+            'x-api-key': 'reqres-free-v1',
+          },
+        }
+      )
       .then((response) => {
         const admin: Admin = {
           token: response.data.token,
