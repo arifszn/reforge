@@ -17,6 +17,8 @@ http.interceptors.request.use(
     const state: RootState = store.getState();
     const apiToken = state.admin?.token;
 
+    config.headers['x-api-key'] = 'reqres-free-v1';
+
     if (apiToken) {
       config.headers.Authorization = `Bearer ${apiToken}`;
     }
